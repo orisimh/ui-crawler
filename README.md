@@ -36,10 +36,8 @@ cd ui-crawler
 npm install
 
 # 3. Configure environment
-
 Create a .env file in the root directory:
 REACT_APP_API_BASE_URL=http://localhost:8000/api/v1
-🔁 Replace the URL with your actual backend address if needed.
 
 
 # 4. Start the development server
