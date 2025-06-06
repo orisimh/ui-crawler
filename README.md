@@ -2,7 +2,7 @@
 
 A **React + TypeScript** frontend for a site crawler that allows users to log in to a selected website and view available deals. It connects to a FastAPI backend and handles authentication using JWT with session-based persistence.
 
----
+
 
 ## 🚀 Features
 
@@ -12,7 +12,7 @@ A **React + TypeScript** frontend for a site crawler that allows users to log in
 - 🎨 Modern UI built with **Tailwind CSS**
 - 🧠 State management via **Redux Toolkit**
 
----
+
 
 ## 🧱 Tech Stack
 
@@ -23,7 +23,7 @@ A **React + TypeScript** frontend for a site crawler that allows users to log in
 | `Redux Toolkit`    | Global state management            |
 | `Tailwind CSS`     | Utility-first CSS framework        |
 
----
+
 
 ## 🛠️ Getting Started
 
