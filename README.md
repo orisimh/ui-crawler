@@ -49,7 +49,7 @@ npm start
 The app will be available at:
 📍 http://localhost:3000
 
----
+```bash
 
 🔒 Authentication Flow
 After login, a JWT token is received and stored in sessionStorage.
