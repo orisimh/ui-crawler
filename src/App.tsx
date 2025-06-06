@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Login from "./components/Login";
+import List from "./components/Deal/List";
+import ProtectedLayout from "./components/Layout";
+import { useSelector } from "react-redux";
+import { RootState } from "./redux/store";
 
 function App() {
+  const token = useSelector((state: RootState) => state.auth.token);
+  console.log("Token from Redux:", token);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+
+        {/* Public route */}
+        <Route path="/" element={<Login />} />
+
+        {/* Protected routes */}
+        <Route element={<ProtectedLayout />}>
+        <Route path="/deals" element={token ? <List /> : <Navigate to="/" />} />
+          {/* <Route path="/deals" element={<List />} /> */}
+        </Route>
+
+      </Routes>
+    </Router>
   );
 }
 
