@@ -29,22 +29,20 @@ A **React + TypeScript** frontend for a site crawler that allows users to log in
 
 ```bash
 # 1. Clone the repository
-
-git clone https://github.com/yourusername/site-crawler-frontend.git
-cd site-crawler-frontend
+git clone https://github.com/orisimh/ui-crawler.git
+cd ui-crawler
 
 # 2. Install dependencies
 npm install
 
 # 3. Configure environment
+
 Create a .env file in the root directory:
-
-
 REACT_APP_API_BASE_URL=http://localhost:8000/api/v1
 🔁 Replace the URL with your actual backend address if needed.
 
-# 4. Start the development server
 
+# 4. Start the development server
 npm start
 The app will be available at:
 📍 http://localhost:3000
