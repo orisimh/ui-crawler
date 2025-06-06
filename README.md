@@ -4,7 +4,7 @@ A **React + TypeScript** frontend for a site crawler that allows users to log in
 
 
 
-
+---
 
 ## 🚀 Features
 
@@ -16,7 +16,7 @@ A **React + TypeScript** frontend for a site crawler that allows users to log in
 
 
 
-
+---
 
 ## 🧱 Tech Stack
 
@@ -27,7 +27,7 @@ A **React + TypeScript** frontend for a site crawler that allows users to log in
 | `Redux Toolkit`    | Global state management            |
 | `Tailwind CSS`     | Utility-first CSS framework        |
 
-
+---
 
 ## 🛠️ Getting Started
 
