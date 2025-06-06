@@ -1,46 +1,96 @@
-# Getting Started with Create React App
+📦 Site Crawler Frontend
+A React + TypeScript frontend for a site crawler that allows users to log in to a selected website and view available deals. This project connects to a FastAPI backend and handles authentication using JWT with session-based token persistence.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Features
+🌐 Website selection + login form
 
-## Available Scripts
+🔐 Protected routes with global auth guard
 
-In the project directory, you can run:
+💾 Token storage using sessionStorage
 
-### `npm start`
+🧾 Deals list displayed after login
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+🎨 Modern UI built with Tailwind CSS
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+🧠 State management via Redux Toolkit
 
-### `npm test`
+🧱 Tech Stack
+Library	Purpose
+React	UI framework
+TypeScript	Type-safe code
+Redux Toolkit	State management
+React Router	Client-side routing
+Axios	HTTP client for API calls
+Tailwind CSS	Utility-first CSS framework
+sessionStorage	Auth token persistence (per tab)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📂 Project Structure
+graphql
+Copy
+Edit
+src/
+├── components/        # UI components (LoginForm, DealsList)
+├── pages/             # Page-level components
+├── redux/             # Redux slices, store, and types
+├── services/          # API calls via Axios
+├── layout/            # Protected route layout
+├── types/             # Shared TypeScript interfaces
+├── styles/            # Global styles (Tailwind)
+└── App.tsx            # App entry + routes
+🛠️ Setup & Installation
+1. Clone the repo:
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/site-crawler-frontend.git
+cd site-crawler-frontend
+2. Install dependencies:
+bash
+Copy
+Edit
+npm install
+3. Configure environment variables:
+Create a .env file in the root with:
 
-### `npm run build`
+bash
+Copy
+Edit
+REACT_APP_API_BASE_URL=http://localhost:8000/api/v1
+Replace with your actual API base URL if needed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Run the app:
+bash
+Copy
+Edit
+npm start
+App will be available at:
+📍 http://localhost:3000
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🔒 Auth Flow
+User logs in → receives JWT token.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Token is stored in sessionStorage.
 
-### `npm run eject`
+All routes (except /) are protected using a global layout-based route guard.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+On logout or session expiry, user is redirected to the login page.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🧪 Future Improvements
+Add refresh token mechanism
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Persist token in localStorage optionally
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Use query caching with RTK Query
 
-## Learn More
+Add unit and integration tests
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🤝 Backend API
+This project is designed to work with a FastAPI backend:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Login Endpoint
+
+Returns: token, deals[], message
+
+🧾 License
+MIT © 2025 – [Your Name]
+
