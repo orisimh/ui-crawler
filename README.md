@@ -42,9 +42,7 @@ REACT_APP_API_BASE_URL=http://localhost:8000/api/v1
 🔁 Replace the URL with your actual backend address if needed.
 
 4. Start the development server
-bash
-Copy
-Edit
+
 npm start
 The app will be available at:
 📍 http://localhost:3000
@@ -52,8 +50,10 @@ The app will be available at:
 
 ```
 
-🔒 Authentication Flow
+### 2. 🔒 Authentication Flow
+
 After login, a JWT token is received and stored in sessionStorage.
+
 
 All protected routes use a global layout-based guard.
 
@@ -61,24 +61,4 @@ If the token is missing or expired, the user is redirected to the login page.
 
 On logout, the token is cleared from session storage.
 
-🧪 Planned Improvements
-Add refresh token support
-
-Move token handling to interceptors
-
-Improve UI/UX with Tailwind animations
-
-Add unit and integration tests
-
-
----
-
-
-🔗 Backend API
-This app is designed to connect with a FastAPI backend:
-
-POST /api/v1/login – login and get token + deals
-
-
----
 
