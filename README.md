@@ -39,7 +39,6 @@ npm install
 Create a .env file in the root directory:
 REACT_APP_API_BASE_URL=http://localhost:8000/api/v1
 
-
 # 4. Start the development server
 npm start
 The app will be available at:
