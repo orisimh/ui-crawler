@@ -25,18 +25,6 @@ A **React + TypeScript** frontend for a site crawler that allows users to log in
 
 ---
 
-## 📂 Folder Structure
-
-src/
-├── components/ # LoginForm, DealsList
-├── pages/ # LoginPage, DealsPage
-├── redux/ # Redux store, slices, types
-├── services/ # API calls (axios)
-├── layout/ # Global auth guard (ProtectedLayout)
-├── styles/ # Tailwind CSS config
-└── App.tsx # Entry point with routing
-
-
 
 ---
 
