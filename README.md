@@ -1,96 +1,116 @@
-📦 Site Crawler Frontend
-A React + TypeScript frontend for a site crawler that allows users to log in to a selected website and view available deals. This project connects to a FastAPI backend and handles authentication using JWT with session-based token persistence.
+# 📦 Site Crawler Frontend
 
-🚀 Features
-🌐 Website selection + login form
+A **React + TypeScript** frontend for a site crawler that allows users to log in to a selected website and view available deals. It connects to a FastAPI backend and handles authentication using JWT with session-based persistence.
 
-🔐 Protected routes with global auth guard
+---
 
-💾 Token storage using sessionStorage
+## 🚀 Features
 
-🧾 Deals list displayed after login
+- 🌐 Website selection + login form
+- 🔐 Protected routes with global auth guard
+- 💾 Token storage using `sessionStorage`
+- 🧾 Deals list displayed after login
+- 🎨 Modern UI built with **Tailwind CSS**
+- 🧠 State management via **Redux Toolkit**
 
-🎨 Modern UI built with Tailwind CSS
+---
 
-🧠 State management via Redux Toolkit
+## 🧱 Tech Stack
 
-🧱 Tech Stack
-Library	Purpose
-React	UI framework
-TypeScript	Type-safe code
-Redux Toolkit	State management
-React Router	Client-side routing
-Axios	HTTP client for API calls
-Tailwind CSS	Utility-first CSS framework
-sessionStorage	Auth token persistence (per tab)
+| Library            | Purpose                            |
+|--------------------|------------------------------------|
+| `React`            | UI framework                       |
+| `TypeScript`       | Type-safe development              |
+| `Redux Toolkit`    | Global state management            |
+| `React Router DOM` | Client-side routing                |
+| `Axios`            | HTTP client for API requests       |
+| `Tailwind CSS`     | Utility-first CSS framework        |
+| `sessionStorage`   | Token persistence (per browser tab)|
 
-📂 Project Structure
-graphql
-Copy
-Edit
+---
+
+## 📂 Folder Structure
+
 src/
-├── components/        # UI components (LoginForm, DealsList)
-├── pages/             # Page-level components
-├── redux/             # Redux slices, store, and types
-├── services/          # API calls via Axios
-├── layout/            # Protected route layout
-├── types/             # Shared TypeScript interfaces
-├── styles/            # Global styles (Tailwind)
-└── App.tsx            # App entry + routes
-🛠️ Setup & Installation
-1. Clone the repo:
-bash
+├── components/ # LoginForm, DealsList
+├── pages/ # LoginPage, DealsPage
+├── redux/ # Redux store, slices, types
+├── services/ # API calls (axios)
+├── layout/ # Global auth guard (ProtectedLayout)
+├── styles/ # Tailwind CSS config
+└── App.tsx # Entry point with routing
+
+yaml
 Copy
 Edit
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the repository
+```bash
 git clone https://github.com/yourusername/site-crawler-frontend.git
 cd site-crawler-frontend
-2. Install dependencies:
+2. Install dependencies
 bash
 Copy
 Edit
 npm install
-3. Configure environment variables:
-Create a .env file in the root with:
+3. Configure environment
+Create a .env file in the root directory:
 
 bash
 Copy
 Edit
 REACT_APP_API_BASE_URL=http://localhost:8000/api/v1
-Replace with your actual API base URL if needed.
+🔁 Replace the URL with your actual backend address if needed.
 
-4. Run the app:
+4. Start the development server
 bash
 Copy
 Edit
 npm start
-App will be available at:
+The app will be available at:
 📍 http://localhost:3000
 
-🔒 Auth Flow
-User logs in → receives JWT token.
+🔒 Authentication Flow
+After login, a JWT token is received and stored in sessionStorage.
 
-Token is stored in sessionStorage.
+All protected routes use a global layout-based guard.
 
-All routes (except /) are protected using a global layout-based route guard.
+If the token is missing or expired, the user is redirected to the login page.
 
-On logout or session expiry, user is redirected to the login page.
+On logout, the token is cleared from session storage.
 
-🧪 Future Improvements
-Add refresh token mechanism
+🧪 Planned Improvements
+Add refresh token support
 
-Persist token in localStorage optionally
+Move token handling to interceptors
 
-Use query caching with RTK Query
+Improve UI/UX with Tailwind animations
 
 Add unit and integration tests
 
-🤝 Backend API
-This project is designed to work with a FastAPI backend:
+🔗 Backend API
+This app is designed to connect with a FastAPI backend:
 
-Login Endpoint
+POST /api/v1/login – login and get token + deals
 
-Returns: token, deals[], message
+📜 License
+MIT © 2025 – Your Name
 
-🧾 License
-MIT © 2025 – [Your Name]
+markdown
+Copy
+Edit
 
+---
+
+This version:
+- Uses proper **Markdown headings** (`#`, `##`, `###`) that GitHub renders with different font sizes.
+- Uses **backticks** for inline code.
+- Includes tables, code blocks, block quotes, and bullet lists — all fully supported by GitHub rendering engine.
+
+Let me know if you want:
+- Shields/badges for build status, tech stack, or license.
+- A `docs/` directory with screenshots or API usage.
