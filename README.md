@@ -25,9 +25,6 @@ A **React + TypeScript** frontend for a site crawler that allows users to log in
 
 ---
 
-
----
-
 ## 🛠️ Getting Started
 
 ### 1. Clone the repository
