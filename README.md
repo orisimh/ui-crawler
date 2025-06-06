@@ -4,6 +4,8 @@ A **React + TypeScript** frontend for a site crawler that allows users to log in
 
 
 
+
+
 ## 🚀 Features
 
 - 🌐 Website selection + login form
@@ -11,6 +13,8 @@ A **React + TypeScript** frontend for a site crawler that allows users to log in
 - 🧾 Deals list displayed after login
 - 🎨 Modern UI built with **Tailwind CSS**
 - 🧠 State management via **Redux Toolkit**
+
+
 
 
 
