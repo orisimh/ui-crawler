@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { AuthState } from "../../types/auth";
 import { login } from "../../services/auth";
+import axios from "axios";
 
 
 const tokenFromSession = sessionStorage.getItem("token");
@@ -23,7 +24,13 @@ export const loginUser = createAsyncThunk(
     try {
       return await login({ username, password, website });
     } catch (err: any) {
+
       console.error("Login error:", err);
+
+      if (!err.response || err.response.status === 401) {
+        sessionStorage.removeItem("token");
+        return rejectWithValue(err.response?.data?.detail || "Unauthorized: Please log in again.");
+      }
       return rejectWithValue(err.response?.data?.detail || "Login failed");
     }
   }

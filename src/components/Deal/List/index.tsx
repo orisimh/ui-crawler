@@ -1,8 +1,43 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
+import { useEffect } from "react";
+    import axios from "axios";
 
 export default function List() {
   const { deals } = useSelector((state: RootState) => state.auth);
+
+
+  useEffect(() => {
+
+//   async function  fetchWebsites() {
+//     try {
+//       const res = await axios.post("http://localhost:8000/api/v1/websites");
+//       return res.data;
+//     } catch (error: any) {
+//       if (axios.isAxiosError(error)) {
+//         // ❗ Check for network issues (CORS, unreachable server)
+
+//         // if (!error.response) {
+//         //   throw new Error("Network error: server unreachable or CORS issue.");
+//         // }
+
+//         // Handle 401 from server
+//         if (error.response.status === 401) {
+//           throw new Error("Unauthorized: please login again.");
+//         }
+
+//         // Handle all other errors
+//         throw new Error(error.response.data.detail || "Unexpected error");
+//       }
+
+//       throw error;
+//     }
+//   }
+  
+//  fetchWebsites();
+
+}, []);
+  // This effect can be used to fetch deals or perform any side effects
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
